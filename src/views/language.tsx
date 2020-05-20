@@ -47,6 +47,15 @@ const Language: React.FC = () => {
             <div className="container">
                 <Subheader title={cat} ></Subheader>
                 <div className="row text-center">
+                    {id === undefined &&
+                        <Card 
+                            title="<New Language here>" 
+                            description="Click the button to create a new language"
+                            key="0" 
+                            category=""
+                            btn_label="New One"
+                        />
+                    }
                     {languages.map((lan: ILanguage,index) => (
                         <Card 
                             title={lan.name} 
